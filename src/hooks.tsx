@@ -72,3 +72,8 @@ function Delayedeffect(props: { timerMs: number}) {
     return null;
 }
 
+
+// useRef
+// in TS, useRef returns a reference that is either read-only or mutable, depends on whether your type argument fully covers the inital value or not. Choose what suits your case
+
+// Option 1: DOM element ref
