@@ -33,6 +33,6 @@ interface Animal {
     name: string;
 }
 
-interface Dog extends Animal {
+interface Dog2 extends Animal {
     breed: string;
 }
