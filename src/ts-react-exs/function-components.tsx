@@ -11,12 +11,17 @@ const App2 = ({ message }: AppProps): React.JSX.Element => <div>{message}</div>;
 // inline type declaration, eliminates nameing the prop types, but looks repetitive
 const App3 = ({ message }: { message: string }) => <div>{message}</div>;
 
+const apple = (seeds: AppProps) => {
+  console.log(seeds.cyanide);
+};
+
 // Person should be a React functional component that accepts a props obj with the props name (string) & age (number)
 interface PersonProps {
   name: string;
   age: number;
 }
 
+// I geuss this is a different way to write that Person is a FN component (like the Apps above )
 const Person: React.FC<PersonProps> = ({ name, age }) => {
   return (
     <div>

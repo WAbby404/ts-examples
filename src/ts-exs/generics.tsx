@@ -85,22 +85,28 @@ const addID = <T extends { name: string }>(obj: T) => {
 
 // When we don't know what type a certain value in an object will be ahead of time, we can use a generic to pass in the type:
 // The type, T, will be passed in
-interface Person<T> {
+interface PersonHug<T> {
   name: string;
   age: number;
   documents: T;
 }
 
 // We have to pass in the type of `documents` - an array of strings in this case
-const person1: Person<string[]> = {
+const person1: PersonHug<string[]> = {
   name: "John",
   age: 48,
   documents: ["passport", "bank statement", "visa"],
 };
 
 // Again, we implement the `Person` interface, and pass in the type for documents - in this case a string
-const person2: Person<string> = {
+const person2: PersonHug<string> = {
   name: "Delia",
   age: 46,
   documents: "passport, P45",
+};
+
+const ex2: PersonHug<object> = {
+  name: "Greg",
+  age: 22,
+  documents: { passport: "holy cow, this dude travels", photo: true },
 };
