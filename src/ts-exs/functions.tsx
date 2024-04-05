@@ -12,3 +12,15 @@ let sayHi: (name: string) => void;
 sayHi = (name: string) => console.log('Hi ' + name);
 sayHi('Danny');
 // Hi Danny
+
+interface Person {
+    name: string
+    age: number
+    speak(sentence: string): void
+}
+
+const person1: Person = {
+    name: 'John',
+    age: 48,
+    speak: sentence => console.log(sentence),
+}
